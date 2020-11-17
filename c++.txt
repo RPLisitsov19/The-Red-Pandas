@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main() {
+  char word[5];
+  int wordLen;
+  cout<<"This is a game for two players" << endl;
+  cout<<"This is your play field" << endl << endl;
+  cout << "   ┃   ┃   " << endl;
+  cout << "━━━━━━━━━━━" << endl;
+  cout << "   ┃   ┃   " << endl;
+  cout << "━━━━━━━━━━━" << endl;
+  cout << "   ┃   ┃   " << endl;
+  cout<<"Are you ready? "<<endl;
+  cout<<"Write 'yes' or 'no' "<<endl;
+  cin.getline(word,5,'\n');
+  wordLen=strlen(word);
+  for(int i=0;i<wordLen;i++)
+  {
+    if(word[i]=='n' and word[i+1]=='o')
+    {
+      cout<<"Then we will wait when you are ready"<<endl;
+      cout<<"...."<<endl;
+      cout<<"When you are ready you need to write 'yes'";
+    }
+  }
+    for(int i=0;i<wordLen;i++)
+  {
+    if(word[i]=='y' and word[i+1]=='e' and word[i+2]=='s')
+    {
+      cout<<"Ok lets start then"<<endl;
+      cout<<"Here are your rules"<<endl;
+
+    }
+  }
+} 
