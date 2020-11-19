@@ -42,3 +42,11 @@ height:60px;
 height:53px;
 margin-bottom:4px;
 }
+
+#tic-tac-toe {
+  height: 350px;
+}
+
+p, h3, li {
+  color: #f5f3ed;
+}
