@@ -15,6 +15,43 @@
     <li><a href="history.html">History</a></li>
   <li><a class="active" href="themath.html">The Math</a></li>
 </ul>
+<table>
+<tr>
+<td><img src="images/tic-tac-toe.jpg" id="tic-tac-toe" alt="tic-tac-toe"></td>
+<td>
+<h3>Game Theory and Tic Tac Toe</h3>
+<p>The game of Noughts and Crosses or Tic Tac Toe is well known throughout the world and variants are thought to have been played over 2000 years ago in Rome. It’s a very simple game – the first person to get 3 in a row wins. In fact it’s so simple that it has been “solved” – before any move has been played we already know it should result in a draw (as long as the participants play optimal moves).
+
+The way to solve Noughts and Crosses is to use combinatorial Game Theory – which is a branch of mathematics that allows us to analyses all different outcomes of an event.</p><td>
+
+</tr>
+<tr>
+<td>
+<p>This is the start of the game tree for Noughts and Crosses. We can expand this game tree to cover every possible outcome for the game. Once this complete tree is drawn, any participant can work through this tree to see what is their optimal move at any one time from any position.</p>
+<p>An upper bound for the number of positions and number of different games is given by:</p>
+<p>3 9= 19,683.  This is the total number of possible game positions in a 3×3 grid – as every square will either be a O, X or blank.</p>
+<p>9! = 362,880. This is the total number of ways that positions can be filled on the grid. (First you have 9 choices of squares, then there are 8 choices of squares etc).  This counts each X and O as distinct from other X and Os.</p>
+<p>9 choose 5 = 126.  This is the number of different combinations of filling the grid with 5 Xs and 4 Os.</p>
+<p>However the analysis of this game tree can be significantly simplified by realising that many different positions are simply reflections or rotations of each other. By looking only for distinct positions (positions that are isometric under refection and rotation) we can, for example, see that there are actually only three distinct starting moves – as shown in the diagram above.</p>
+</td>
+<td><iframe width="560" height="315" src="https://www.youtube.com/embed/wdDF7_vfLcE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+<tr>
+<td>
+<p>James Grime from Numberphile takes us through how to answer a related question, “How many different ways are there to completely fill a Noughts and Crosses board with 5 Xs and 4 Os – not including rotations and reflections?”  The solution above is a little complicated (it makes uses of Group Theory) but it is an excellent introduction to some uses of higher level mathematics.</p>
+<img src="images/tic-tac-toe2.jpg" id="tic-tac-toe" alt="tic-tac-toe2">
+</td>
+<td>
+<p>This somewhat horrendous looking graphic actually contains the solution to playing Noughts and Crosses. You can use it to always achieve the optimal outcome for X. It works as follows:</p>
+<ol>
+<li>The big red X in the top left hand corner represents your best first move. So you make this move first.</li><br>
+<li>Next,you see what your opponent does and choose the grid with the big black O in the position they have chosen.</li><br>
+<li>This new grid will have a big red X – this is your next optimal move.</li><br>
+<li>You then remain in your subsection of the larger grid – and repeat the process.</li>
+</ol>
+</td>
+</tr>
+</table>
 <footer>
   <img src="images/insta.png" alt="instagram">
   <img src="images/youtube.png" alt="youtube">
