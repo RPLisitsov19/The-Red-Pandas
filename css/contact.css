@@ -33,7 +33,7 @@ li a:hover {
 
 footer {
 	text-align: center;
-	margin-top:43%;
+	margin-top:26%;
 	padding: 3px;
     background-color: #f5f3ed;
 	color:#424039;
@@ -46,4 +46,11 @@ img {
 #twitter {
 	height:53px;
 	margin-bottom:4px;
+}
+h2{
+text-align:center;
+color:white;
+}
+h3{
+color:white;
 }
