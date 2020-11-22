@@ -1,10 +1,11 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-//displays menu of the game
+//displays menu of the game and its options
 void Menu() {
-  cout << "-==||== G A M E - M E N U ==||==-" << endl;
+  cout << setw(38) << "-==||== G A M E - M E N U ==||==-" << endl;
 
   cout << endl;
 
@@ -20,7 +21,7 @@ void Menu() {
 
 //displays text, containing the rules (1)
 void Rules() {
-  cout <<  "-==||== R U L E S ==||==-" << endl;
+  cout << setw(35) << "-==||== R U L E S ==||==-" << endl;
 
   cout << endl;
 
@@ -41,42 +42,98 @@ void Rules() {
 
 //displays text, explaining how to play the game (2)
 void HowToPlay() {
+
+  cout << setw(44) << "-==||== H O W - T O - P L A Y ==||==-" << endl;
+
+  cout << endl;
+
   cout << "Here's how the grid looks:" << endl;
+
+  cout << "     |     |     " << endl;
+  cout << "  1  |  2  |  3  " << endl;
+  cout << "_____|_____|_____" << endl;
+
+  cout << "     |     |     " << endl;
+  cout << "  4  |  5  |  6  " << endl;
+  cout << "_____|_____|_____" << endl;
+
+  cout << "     |     |     " << endl;
+  cout << "  7  |  8  |  9  " << endl;
+  cout << "     |     |     " << endl;
+ 
+  cout << endl;
+
+  cout << "Player 1 (X) starts off the game by entering the number that corresponds to the number on the grid where they want to place their symbol." << endl;
+  cout << "Then Player 2 (O) makes their move. And the two players take turns." << endl;
+  cout << "The game ends when one of the players has their symbol in a row." << endl;
 
 }
 
-//starts the game
+//starts the game (3)
 void PlayGame() {
 
 }
 
-//exits the programme
-void Exit() {
-
+//exits the code (4)
+bool Exit() {
+  return 0;
 }
 
-//asks if you want to continue, and if yes (y) displays the menu
-void Continue(char cont) {
-  cout << "Would you like to try something else? (y/n)" << endl;
+//displays the menu again and makes you choose an option
+bool Continue(char cont, int choice) {
 
+  cout << endl;
+  cout << "Would you like to see something else? (y/n)";
+  
   cin >> cont;
 
   if(cont == 'y') {
     Menu();
-  }
+    cout << "Enter option number: ";
+    cin >> choice;
 
-  else {
-    cout << "Okay! Got it!" << endl;
+    switch(choice) {
+
+    case 1: {
+      Rules();
+      Continue(cont, choice);
+      break;
+    }
+
+    case 2: {
+      HowToPlay();
+      Continue(cont, choice);
+      break;
+    }
+
+    case 3: {
+      PlayGame();
+      Continue(cont, choice);
+      break;
+    }
+
+    case 4:
+    {
+      Exit();
+      break;
+    }
+
+    default: {
+      cout << "Something's wrong! Make sure you've entered a whole number (type int) from 1 to 4." << endl;
+    }
   }
+}
+
+  return 0;
 }
 
 int main() {
 
-  cout << "--=||===||===|+|===||===||=--" << endl;
+  cout << setw(40) << "--=+||===|+|===|▼|===|+|===|+|=--" << endl;
   cout << endl;
-  cout << "THE RED PANDAS'S TIC-TAC-TOE" << endl;
+  cout << setw(35) << "THE RED PANDAS'S TIC-TAC-TOE" << endl;
   cout << endl;
-  cout << "--=||===||===|+|===||===||=--" << endl;
+  cout << setw(40) << "--=|+|===|+|===|▲|===|+|===|+|=--" << endl;
 
   cout << endl;
 
@@ -92,28 +149,28 @@ int main() {
   cout << endl;
 
   switch(choice) {
+
     case 1: {
       Rules();
-      Continue(cont);
+      Continue(cont, choice);
       break;
     }
 
     case 2: {
       HowToPlay();
-      Continue(cont);
+      Continue(cont, choice);
       break;
     }
 
     case 3: {
       PlayGame();
-      Continue(cont);
+      Continue(cont, choice);
       break;
     }
 
     case 4:
     {
       Exit();
-      Continue(cont);
       break;
     }
 
