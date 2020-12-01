@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
 background-color:#f5f3ed;
 box-sizing: border-box;
@@ -69,3 +70,62 @@ color:black;}
 #video{
 padding-left: 290px;
 }
+=======
+body {
+font-family: 'Arvo', serif;
+background-color:#424039;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f5f3ed;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #424039;
+  text-align: center;
+  padding: 14px 156px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #fcc572;
+}
+.active {
+  background-color: #db680f;
+}
+footer {
+  text-align: center;
+  margin-top:4%;
+  padding: 3px;
+  background-color: #f5f3ed;
+  color:#424039;
+}
+img{
+height:60px;
+}
+#twitter{
+height:53px;
+margin-bottom:4px;
+}
+
+#tic-tac-toe {
+  height: 350px;
+}
+
+p, h3, li {
+  color: #f5f3ed;
+}
+
+#video{
+margin-top:10%;
+margin-left:24%;
+}
+>>>>>>> fc062a193dcf04b40d2e4d0b0648bbffd1f72d3c
