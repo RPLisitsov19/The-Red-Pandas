@@ -21,7 +21,6 @@ align-items:center;
 padding: 30px 10%;
 }
 
-
 .nav_links{
 list-style:none;
 }
@@ -45,7 +44,7 @@ transition: all 0.3s ease 0s;
 }
 
 button:hover{
-background-color:rgba(0,136,169,0.8);
+background-color:black;
 }
 
 header{
