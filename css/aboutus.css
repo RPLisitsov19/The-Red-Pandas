@@ -21,6 +21,7 @@ align-items:center;
 padding: 30px 10%;
 }
 
+
 .nav_links{
 list-style:none;
 }
@@ -28,6 +29,7 @@ list-style:none;
 display:inline-block;
 padding: 0px 20px;
 }
+
 
 .nav_links li a:hover{
 color:#fcc572;
