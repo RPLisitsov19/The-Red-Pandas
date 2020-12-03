@@ -282,7 +282,7 @@ void Continue(char cont, int choice) {
 
 int main() {
 
-  cout << setw(40) << "--=+||===|+|===|▼|===|+|===|+|=--" << endl;
+  cout << setw(40) << "--=|+|===|+|===|▼|===|+|===|+|=--" << endl;
   cout << endl;
   cout << setw(35) << "THE RED PANDAS'S TIC-TAC-TOE" << endl;
   cout << endl;
